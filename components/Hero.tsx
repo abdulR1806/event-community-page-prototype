@@ -3,7 +3,7 @@ import { Button } from './Button';
 
 export const Hero: React.FC = () => {
   return (
-    <section id="beranda" className="relative h-[90vh] min-h-[700px] flex items-center text-[#1A1A2E] overflow-hidden">
+    <section id="beranda" className="relative h-[75vh] min-h-[600px] flex items-center text-[#1A1A2E] overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img src="https://picsum.photos/seed/fortunespace/1920/1080" alt="Creative activities in a vibrant space" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#F0F0F5] via-[#F0F0F5]/80 to-transparent"></div>
