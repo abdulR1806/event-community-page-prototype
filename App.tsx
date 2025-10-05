@@ -1,43 +1,29 @@
-
 import React from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { EventCards } from './components/EventCards';
 import { Ticker } from './components/Ticker';
-import { Stats } from './components/Stats';
-import { About } from './components/About';
-import { Topics } from './components/Topics';
-import { CommunityCTA } from './components/CommunityCTA';
-import { Highlights } from './components/Highlights';
-import { Speakers } from './components/Speakers';
-import { RecapVideo } from './components/RecapVideo';
-import { WhoYouWillMeet } from './components/WhoYouWillMeet';
-import { Testimonials } from './components/Testimonials';
-import { SocialFeed } from './components/SocialFeed';
-import { SponsorCTA } from './components/SponsorCTA';
+import { AboutUs } from './components/AboutUs';
+import { Workshops } from './components/Workshops';
+import { SpaceRental } from './components/SpaceRental';
+import { Community } from './components/Community';
+import { ContactFAQ } from './components/ContactFAQ';
 import { Footer } from './components/Footer';
-import { eventLocations, tickerItems, testimonials, socialPosts, speakers } from './constants';
+import { workshops, spaces, communityEvents, faqs } from './constants';
 
 const App: React.FC = () => {
+  const workshopTitles = workshops.map(w => w.title);
+
   return (
     <div className="bg-[#F0F0F5] text-[#1A1A2E] overflow-x-hidden">
       <Header />
       <main>
         <Hero />
-        <EventCards events={eventLocations} />
-        <Ticker items={tickerItems} />
-        <Stats />
-        <About />
-        <Topics />
-        <CommunityCTA />
-        <Highlights />
-        <Speakers speakers={speakers}/>
-        <RecapVideo />
-        <WhoYouWillMeet />
-        <Testimonials testimonials={testimonials} />
-        <Ticker items={tickerItems} />
-        <SocialFeed posts={socialPosts} />
-        <SponsorCTA />
+        <Ticker items={workshopTitles} />
+        <AboutUs />
+        <Workshops workshops={workshops} />
+        <SpaceRental spaces={spaces} />
+        <Community events={communityEvents} />
+        <ContactFAQ faqs={faqs} />
       </main>
       <Footer />
     </div>
